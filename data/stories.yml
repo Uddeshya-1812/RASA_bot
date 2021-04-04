@@ -1,0 +1,37 @@
+version: "2.0"
+
+stories:
+
+- story: book ac room allowed time
+  steps: 
+  - intent: book_table
+  - action: utter_ask_seats
+  - intent: book_seats
+    entities:
+    - seat_number
+  - action: utter_ask_section
+  - intent: air_conditioned
+    entities: 
+    - air_condition
+  - action: utter_ask_reservation_time
+  - intent: reservation_time
+    entities: 
+    - time
+  - action: action_reservation
+
+- story: book non ac room allowed time
+  steps: 
+  - intent: book_table
+  - action: utter_ask_seats
+  - intent: book_seats
+    entities:
+    - seat_number
+  - action: utter_ask_section
+  - intent: non_airconditioned
+    entities: 
+    - non_aircondition
+  - action: utter_ask_reservation_time
+  - intent: reservation_time
+    entities:
+    - time
+  - action: action_reservation

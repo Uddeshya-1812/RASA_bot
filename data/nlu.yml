@@ -1,0 +1,137 @@
+version: "2.0"
+
+nlu:
+- synonym: AC
+  examples: |
+    - ac
+    - air conditioned
+    - air condition
+
+- synonym: Non-AC
+  examples: |
+    - non ac
+    - Non-AC 
+    - non air conditioned
+    - non air-condition
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: book_table
+  examples: |
+    - I want to reserve a table 
+    - I want to book a table
+    - I wish to make a booking
+    - reserve a table for me
+    - book me a table
+
+
+- intent: book_seats
+  examples: |
+    - I want to reserve [4]{"entity":"seat_number","value" : "4" } seats
+    - I want to reserve [5]{"entity":"seat_number","value" : "5"} seats
+    - Reserve [3]{"entity":"seat_number","value" : "3" } seats for me
+    - I want [2]{"entity":"seat_number","value" : "2" } seats to be booked for me
+    - book [5]{"entity":"seat_number","value" : "5" } seats on me
+    - I wish to book [5]{"entity":"seat_number","value" : "5" } on me
+    - I wish to give orders for [7]{"entity":"seat_number","value" : "7" } seats
+  
+- intent: air_conditioned
+  examples: |
+    - AC
+    - ac room
+
+
+- intent: non_airconditioned
+  examples: |
+    - non-ac
+    - Non-AC
+
+- intent: reservation_time
+  examples: |
+    - 12pm
+    - around 8am
+    - around 6 am
+    - around 12 pm
+    - around 15 hours
+    - 6 pm
+    - 8pm
+    - 7:30 pm
+    - in an hour
+    - in a quater
+    - in 60 min
+    - in 30 min
+    - in 15 min
+    - in 20 min 
+    - in around 15 min
+    - around an hour
+    - in around half a hour
+    - in half an hour
+    - 9pm
+    - at 7pm
+    - around 8pm
+    - around 7:30pm
+    - book me table around 7:15pm 
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+  
+- intent: faq/ask_timings
+  examples: |
+    - What are your timings?
+    - What is the opening and closing time of this restaurant?
+    - At What time do you operate?
+    - What time do you take orders?
+
+- intent: faq/ask_days
+  examples: |
+    - What days are you open?
+    - When is this place closed?
+    - When do you not deliver the food?
+    - How many days does this place is open?
+
+- intent: faq/cancel_reservation
+  examples: |
+    - How do I cancel a reservation?
+    - I want to cancel a reservation
+    - How to withdraw an orders?
+    - How to make a cancellation?
+
+- intent: faq/ask_special
+  examples: |
+    - What are the specials?
+    - What special do you make?
+    - What is your best dish?
+    - What are you known for?
+

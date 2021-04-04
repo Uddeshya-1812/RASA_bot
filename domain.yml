@@ -1,0 +1,84 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - faq
+  - book_table
+  - book_seats 
+  - air_conditioned
+  - non_airconditioned
+  - reservation_time
+
+entities:
+  - seat_number
+  - air_condition
+  - non_aircondition
+  - time
+
+slots:
+  seat_number:
+    type : text
+  time:
+    type: any
+  air_condition:
+    type: text
+  non_aircondition:
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_ask_seats:
+  - text: "How many seats would you like to reserve?"
+  
+  utter_ask_section:
+  - text: "Which Section would you prefer?"
+    buttons:
+    - title: "AC"
+      payload: /air_conditioned{"air_condition":"AC"}
+    - title: "Non-AC" 
+      payload: /non_airconditioned{"non_aircondition":"Non-AC"}
+      
+  utter_ask_reservation_time:
+  - text: " When would you like to book a reservation? (We are only open from 7pm to 10pm)"
+
+  utter_book_info:
+  - text: "You have reserved {seats} seats in our {ac_status} section for {booking_time}. Thanks!"
+
+  utter_faq/ask_timings:
+  - text: " The restaurant opens at 7pm and closes at 10pm."
+
+  utter_faq/ask_days:
+  - text: "The restaurant is open each and every day."
+  
+  utter_faq/cancel_reservation:
+  - text: "To cancel a reservation, simply call us at +91 9876543210 and cancel your reservation"
+
+  utter_faq/ask_special:
+  - text: "Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city"
+  
+  utter_book_nonac_info:
+  - text: "You have reserved {seat_number} seats in our {non_aircondition} section for {time}. Thanks!"
+
+
+actions:
+  - action_reservation
+
+
+# forms:
+#   time_details_form:
+#     time:
+#       - type: from text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
