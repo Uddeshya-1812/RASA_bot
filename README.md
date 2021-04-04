@@ -89,12 +89,6 @@ Bot: To cancel a reservation, simply call us at [helpline number]  and cancel yo
 User: What are the specials?
 Bot: Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city.
 ```
-
-## Bonus Section
-In natural conversations, users do not always follow pre-defined paths. In an attempt to add some flexibility for that, we can add some functionality to handle questions asked in the middle of a pre-defined flow.
-
-For the bonus section, add support to ask any number of FAQs in the middle of pre-defined flows.
-
 **Sample Flow**
 
 User: I want to reserve a table for 4
