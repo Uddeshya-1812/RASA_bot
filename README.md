@@ -86,28 +86,6 @@ Bot: To cancel a reservation, simply call us at [helpline number]  and cancel yo
 User: What are the specials?
 Bot: Our chef is a master of the Italian cuisine. Our core speciality is our pasta, which is renowned throughout the city.
 ```
-**Sample Flow**
-
-User: I want to reserve a table for 4
-
-Bot: Which section would you like to book
-
-- AC
-- Non-AC
-
-User: (Clicks on Button 1)
-
-Bot: When would you like to book a reservation? (We are only open from 7pm to 10pm)
-
-User: Are you open today?
-
-Bot: The restaurant is open each and every day.
-
-Bot: When would you like to book a reservation? (We are only open from 7pm to 10pm)
-
-User: At 8pm
-
-Bot: You have reserved 4 seats in our AC section for 8pm. Thanks!
 
  
 ## How it works
