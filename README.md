@@ -6,10 +6,7 @@ following basic functionalities are handled by the bot
 
 # Installation
 
-`python 3.6.8` is recommended for use with Rasa!
-
-# Instructions
-(https://rasa.com/docs/rasa/user-guide/rasa-tutorial/) to get an idea of how to approach the problem.
+`python 3.6` is recommended for use with Rasa!
 
 # Flows
 ## Book Reservation
